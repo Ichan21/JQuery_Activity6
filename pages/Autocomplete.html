@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Accordion - Modern UI</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <style>
+        /* Base styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        h1, label {
+            color: #FFFFFF;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+            text-align: center;
+            padding: 30px;
+            font-size: 24px;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+
+        /* Navigation styling */
+        nav {
+            background-color: #1d1d1d;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+        }
+        nav ul {
+            list-style-type: none;
+        }
+        nav ul li {
+            margin: 15px 0;
+        }
+        nav ul li a {
+            display: flex;
+            align-items: center;
+            padding: 12px 18px;
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #333333;
+        }
+        nav ul li a i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* Main Section */
+        section {
+            display: flex;
+            gap: 30px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        /* Article/Content Area */
+        article {
+            flex-grow: 1;
+            background-color: #1d1d1d;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .ui-widget {
+            background-color: #121212;
+            border-radius: 8px;
+            padding: 10px;
+            color: #FFFFFF;
+        }
+        input#tags {
+            width: 100%;
+            padding: 8px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333333;
+            color: #FFFFFF;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1d1d1d;
+            font-size: 14px;
+            color: #999999;
+            border-top: 1px solid #333333;
+        }
+    </style>
+    <script>
+    $(function() {
+      var availableTags = [
+        "ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", 
+        "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", 
+        "Groovy", "Haskell", "Java", "JavaScript", "Lisp", 
+        "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"
+      ];
+      $("#tags").autocomplete({
+        source: availableTags
+      });
+    });
+    </script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Modern UI Widget</h1>
+    </header>
+
+    <!-- Main Section -->
+    <section>
+        <!-- Navigation Section -->
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/pages/Accordion.html"><i class="fas fa-list"></i> Accordion</a></li>
+                <li><a href="/pages/Autocomplete.html"><i class="fas fa-search"></i> Autocomplete</a></li>
+                <li><a href="/pages/Button.html"><i class="fas fa-mouse-pointer"></i> Button</a></li>
+                <li><a href="/pages/Checkboxradio.html"><i class="fas fa-check-square"></i> Checkbox Radio</a></li>
+                <li><a href="/pages/Controlgroup.html"><i class="fas fa-layer-group"></i> Control Group</a></li>
+                <li><a href="/pages/Datepicker.html"><i class="fas fa-calendar-alt"></i> Date Picker</a></li>
+                <li><a href="/pages/Dialog.html"><i class="fas fa-comments"></i> Dialog</a></li>
+                <li><a href="/pages/Menu.html"><i class="fas fa-bars"></i> Menu</a></li>
+                <li><a href="/pages/Progressbar.html"><i class="fas fa-tasks"></i> Progressbar</a></li>
+                <li><a href="/pages/Selectmenu.html"><i class="fas fa-list-alt"></i> Select Menu</a></li>
+                <li><a href="/pages/Slider.html"><i class="fas fa-sliders-h"></i> Slider</a></li>
+                <li><a href="/pages/Spinner.html"><i class="fas fa-sync"></i> Spinner</a></li>
+                <li><a href="/pages/Tabs.html"><i class="fas fa-folder"></i> Tabs</a></li>
+                <li><a href="/pages/Tooltip.html"><i class="fas fa-info-circle"></i> Tooltip</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content Section -->
+        <article>
+            <div class="ui-widget">
+                <label for="tags">Tags:</label>
+                <input id="tags" placeholder="Type to search...">
+            </div>
+        </article>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>College of Information and Computing Sciences @ MarSU &copy; 2024</p>
+    </footer>
+
+</body>
+</html>
+
+

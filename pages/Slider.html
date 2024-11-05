@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Accordion - Collapse Content</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <style>
+        #red, #green, #blue {
+          float: left;
+          clear: left;
+          width: 300px;
+          margin: 15px;
+        }
+        #swatch {
+          width: 120px;
+          height: 100px;
+          margin-top: 18px;
+          margin-left: 350px;
+          background-image: none;
+        }
+        #red .ui-slider-range { background: #ef2929; }
+        #red .ui-slider-handle { border-color: #ef2929; }
+        #green .ui-slider-range { background: #8ae234; }
+        #green .ui-slider-handle { border-color: #8ae234; }
+        #blue .ui-slider-range { background: #729fcf; }
+        #blue .ui-slider-handle { border-color: #729fcf; }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+          function hexFromRGB(r, g, b) {
+            var hex = [
+              r.toString( 16 ),
+              g.toString( 16 ),
+              b.toString( 16 )
+            ];
+            $.each( hex, function( nr, val ) {
+              if ( val.length === 1 ) {
+                hex[ nr ] = "0" + val;
+              }
+            });
+            return hex.join( "" ).toUpperCase();
+          }
+          function refreshSwatch() {
+            var red = $( "#red" ).slider( "value" ),
+              green = $( "#green" ).slider( "value" ),
+              blue = $( "#blue" ).slider( "value" ),
+              hex = hexFromRGB( red, green, blue );
+            $( "#swatch" ).css( "background-color", "#" + hex );
+          }
+       
+          $( "#red, #green, #blue" ).slider({
+            orientation: "horizontal",
+            range: "min",
+            max: 255,
+            value: 127,
+            slide: refreshSwatch,
+            change: refreshSwatch
+          });
+          $( "#red" ).slider( "value", 255 );
+          $( "#green" ).slider( "value", 140 );
+          $( "#blue" ).slider( "value", 60 );
+        } );
+        </script>
+</head>
+<body>
+
+     <!-- Header Section -->
+     <header>
+      <h1>Modern UI Widget</h1>
+    </header>
+
+    <!-- Main Section -->
+    <section>
+       <!-- Navigation Section -->
+       <nav>
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="/pages/Accordion.html"><i class="fas fa-list"></i>Accordion</a></li>
+            <li><a href="/pages/Autocomplete.html"><i class="fas fa-search"></i>Autocomplete</a></li>
+            <li><a href="/pages/Button.html"><i class="fas fa-mouse-pointer"></i>Button</a></li> 
+            <li><a href="/pages/Checkboxradio.html"><i class="fas fa-check-square"></i>Checkbox Radio</a></li>
+            <li><a href="/pages/Controlgroup.html"><i class="fas fa-layer-group"></i>Control Group</a></li>
+            <li><a href="/pages/Datepicker.html"><i class="fas fa-calendar-alt"></i>Date Picker</a></li>
+            <li><a href="/pages/Dialog.html"><i class="fas fa-comments"></i>Dialog</a></li>
+            <li><a href="/pages/Menu.html"><i class="fas fa-bars"></i>Menu</a></li>
+            <li><a href="/pages/Progressbar.html"><i class="fas fa-tasks"></i>Progressbar</a></li>
+            <li><a href="/pages/Selectmenu.html"><i class="fas fa-list-alt"></i>Select Menu</a></li>
+            <li><a href="/pages/Slider.html"><i class="fas fa-sliders-h"></i>Slider</a></li>
+            <li><a href="/pages/Spinner.html"><i class="fas fa-sync"></i>Spinner</a></li>
+            <li><a href="/pages/Tabs.html"><i class="fas fa-folder"></i>Tabs</a></li>
+            <li><a href="/pages/Tooltip.html"><i class="fas fa-info-circle"></i>Tooltip</a></li>
+        </ul>
+    </nav>
+
+        <!-- Content Section -->
+        <article>
+            <p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+                <span class="ui-icon ui-icon-pencil" style="float:left; margin:-2px 5px 0 0;"></span>
+                Simple Colorpicker
+              </p>
+               
+              <div id="red"></div>
+              <div id="green"></div>
+              <div id="blue"></div>
+               
+              <div id="swatch" class="ui-widget-content ui-corner-all"></div>              
+        </article>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>College of Information and Computing Sciences @ MarSU &copy; 2024</p>
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Add any jQuery functionality here if needed
+    });
+    </script>
+</body>
+</html>

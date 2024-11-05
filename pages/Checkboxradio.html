@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Accordion - Collapse Content</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "input" ).checkboxradio({
+            icon: false
+          });
+        } );
+        </script>
+<body>
+
+    <!-- Header Section -->
+    <header>
+      <h1>Modern UI Widget</h1>
+  </header>
+
+    <!-- Main Section -->
+    <section>
+        <!-- Navigation Section -->
+        <nav>
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="/pages/Accordion.html"><i class="fas fa-list"></i>Accordion</a></li>
+                <li><a href="/pages/Autocomplete.html"><i class="fas fa-search"></i>Autocomplete</a></li>
+                <li><a href="/pages/Button.html"><i class="fas fa-mouse-pointer"></i>Button</a></li> 
+                <li><a href="/pages/Checkboxradio.html"><i class="fas fa-check-square"></i>Checkbox Radio</a></li>
+                <li><a href="/pages/Controlgroup.html"><i class="fas fa-layer-group"></i>Control Group</a></li>
+                <li><a href="/pages/Datepicker.html"><i class="fas fa-calendar-alt"></i>Date Picker</a></li>
+                <li><a href="/pages/Dialog.html"><i class="fas fa-comments"></i>Dialog</a></li>
+                <li><a href="/pages/Menu.html"><i class="fas fa-bars"></i>Menu</a></li>
+                <li><a href="/pages/Progressbar.html"><i class="fas fa-tasks"></i>Progressbar</a></li>
+                <li><a href="/pages/Selectmenu.html"><i class="fas fa-list-alt"></i>Select Menu</a></li>
+                <li><a href="/pages/Slider.html"><i class="fas fa-sliders-h"></i>Slider</a></li>
+                <li><a href="/pages/Spinner.html"><i class="fas fa-sync"></i>Spinner</a></li>
+                <li><a href="/pages/Tabs.html"><i class="fas fa-folder"></i>Tabs</a></li>
+                <li><a href="/pages/Tooltip.html"><i class="fas fa-info-circle"></i>Tooltip</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content Section -->
+        <article>
+            <div class="widget">
+                <h1>Checkbox and radio button widgets</h1>
+               
+                <h2>Radio Group</h2>
+                <fieldset>
+                  <legend>Select a Location: </legend>
+                  <label for="radio-1">New York</label>
+                  <input type="radio" name="radio-1" id="radio-1">
+                  <label for="radio-2">Paris</label>
+                  <input type="radio" name="radio-1" id="radio-2">
+                  <label for="radio-3">London</label>
+                  <input type="radio" name="radio-1" id="radio-3">
+                </fieldset>
+               
+                <h2>Checkbox</h2>
+                <fieldset>
+                  <legend>Hotel Ratings: </legend>
+                  <label for="checkbox-1">2 Star</label>
+                  <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                  <label for="checkbox-2">3 Star</label>
+                  <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                  <label for="checkbox-3">4 Star</label>
+                  <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                  <label for="checkbox-4">5 Star</label>
+                  <input type="checkbox" name="checkbox-4" id="checkbox-4">
+                </fieldset>
+               
+                <h2>Checkbox nested in label</h2>
+                <fieldset>
+                  <legend>Bed Type: </legend>
+                  <label for="checkbox-nested-1">2 Double
+                    <input type="checkbox" name="checkbox-nested-1" id="checkbox-nested-1">
+                  </label>
+                  <label for="checkbox-nested-2">2 Queen
+                    <input type="checkbox" name="checkbox-nested-2" id="checkbox-nested-2">
+                  </label>
+                  <label for="checkbox-nested-3">1 Queen
+                    <input type="checkbox" name="checkbox-nested-3" id="checkbox-nested-3">
+                  </label>
+                  <label for="checkbox-nested-4">1 King
+                    <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
+                  </label>
+                </fieldset>
+        </article>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>College of Information and Computing Sciences @ MarSU &copy; 2024</p>
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Add any jQuery functionality here if needed
+    });
+    </script>
+</body>
+</html>
